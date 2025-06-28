@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mix Legal Services</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header will be loaded here by JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our expert legal cost drafting team for a consultation and quote.</p>
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>Contact</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="page-content">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Get Your Quote Today</h2>
+                <p>Ready to maximize your cost recovery? Our experienced team is here to help you with all your legal cost drafting needs.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            <a href="mailto:info@mixlegalservices.co.uk">info@mixlegalservices.co.uk</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong><br>
+                            <a href="tel:+442012345678">+44 (0) 20 1234 5678</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <strong>Business Hours</strong><br>
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 10:00 AM - 2:00 PM<br>
+                            Sunday: Closed
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Address</strong><br>
+                            123 Legal District<br>
+                            London, EC1A 1BB<br>
+                            United Kingdom
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="stats-grid mt-8">
+                    <div class="stat-item">
+                        <div class="stat-number">24hr</div>
+                        <div class="stat-label">Response Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="form-error" id="name-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="form-error" id="email-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="form-error" id="phone-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company/Firm</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Please select...</option>
+                            <option value="civil">Civil Matter Cost Drafting</option>
+                            <option value="housing">Housing Dispute Costs</option>
+                            <option value="interparty">Interparty Bill Preparation</option>
+                            <option value="analysis">Cost Analysis & Review</option>
+                            <option value="consultation">General Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-error" id="service-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="urgency">Urgency Level</label>
+                        <select id="urgency" name="urgency">
+                            <option value="standard">Standard (5-7 days)</option>
+                            <option value="priority">Priority (2-3 days)</option>
+                            <option value="urgent">Urgent (24-48 hours)</option>
+                            <option value="emergency">Emergency (Same day)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Please provide details about your case, timeline requirements, and any specific needs..." required maxlength="1000"></textarea>
+                        <div class="form-error" id="message-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            I consent to being contacted about my enquiry *
+                        </label>
+                        <div class="form-error" id="consent-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            Subscribe to our newsletter for legal cost updates
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="spinner hidden" id="submit-spinner"></span>
+                    </button>
+                </form>
+                
+                <!-- Success/Error Messages -->
+                <div id="form-messages"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="page-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How quickly can you provide a quote?</h3>
+                    <p>We typically provide quotes within 24 hours of receiving your enquiry. For urgent matters, we can often provide same-day quotes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What information do you need for a quote?</h3>
+                    <p>We need details about the type of case, the stage of proceedings, estimated value, and any specific requirements or deadlines.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you handle cases nationwide?</h3>
+                    <p>Yes, we provide legal cost drafting services for cases across England and Wales, regardless of the court or jurisdiction.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What are your payment terms?</h3>
+                    <p>We typically require 50% payment upfront with the balance due upon completion. Payment plans are available for larger cases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded here by JavaScript -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript Files - Load components first -->
+    <script src="../assets/js/utils/dom-helpers.js"></script>
+    <script src="../assets/js/utils/storage.js"></script>
+    <script src="../assets/js/utils/validation.js"></script>
+    <script src="../assets/js/components/header.js"></script>
+    <script src="../assets/js/components/footer.js"></script>
+    <script src="../assets/js/components/theme-toggle.js"></script>
+    <script src="../assets/js/components/navigation.js"></script>
+    <script src="../assets/js/components/smooth-scroll.js"></script>
+    <script src="../assets/js/components/form-handler.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Check URL parameters for pre-selected service
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get('service');
+            if (serviceParam) {
+                const serviceSelect = document.getElementById('service');
+                if (serviceSelect) {
+                    serviceSelect.value = serviceParam;
+                }
+            }
+        });
+    </script>
+</body>
+</html>">
+                        <span class="btn-text">Send Message</span>
+                        <span class="spinner hidden" id="submit-spinner"></span>
+                    </button>
+                </form>
+                
+                <!-- Success/Error Messages -->
+                <div id="form-messages"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="page-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How quickly can you provide a quote?</h3>
+                    <p>We typically provide quotes within 24 hours of receiving your enquiry. For urgent matters, we can often provide same-day quotes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What information do you need for a quote?</h3>
+                    <p>We need details about the type of case, the stage of proceedings, estimated value, and any specific requirements or deadlines.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you handle cases nationwide?</h3>
+                    <p>Yes, we provide legal cost drafting services for cases across England and Wales, regardless of the court or jurisdiction.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What are your payment terms?</h3>
+                    <p>We typically require 50% payment upfront with the balance due upon completion. Payment plans are available for larger cases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/utils/dom-helpers.js"></script>
+    <script src="../assets/js/utils/storage.js"></script>
+    <script src="../assets/js/utils/validation.js"></script>
+    <script src="../assets/js/components/theme-toggle.js"></script>
+    <script src="../assets/js/components/navigation.js"></script>
+    <script src="../assets/js/components/smooth-scroll.js"></script>
+    <script src="../assets/js/components/form-handler.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Load header and footer components
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Load header
+            try {
+                const headerResponse = await fetch('../components/header.html');
+                const headerHtml = await headerResponse.text();
+                document.getElementById('header-placeholder').innerHTML = headerHtml;
+                
+                // Update active navigation
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href').includes('contact.html')) {
+                        link.classList.add('active');
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading header:', error);
+            }
+
+            // Load footer
+            try {
+                const footerResponse = await fetch('../components/footer.html');
+                const footerHtml = await footerResponse.text();
+                document.getElementById('footer-placeholder').innerHTML = footerHtml;
+            } catch (error) {
+                console.error('Error loading footer:', error);
+            }
+
+            // Check URL parameters for pre-selected service
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get('service');
+            if (serviceParam) {
+                const serviceSelect = document.getElementById('service');
+                if (serviceSelect) {
+                    serviceSelect.value = serviceParam;
+                }
+            }
+        });
+    </script>
+</body>
+</html>">
+                        <span class="btn-text">Send Message</span>
+                        <span class="spinner hidden" id="submit-spinner"></span>
+                    </button>
+                </form>
+                
+                <!-- Success/Error Messages -->
+                <div id="form-messages"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="page-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How quickly can you provide a quote?</h3>
+                    <p>We typically provide quotes within 24 hours of receiving your enquiry. For urgent matters, we can often provide same-day quotes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What information do you need for a quote?</h3>
+                    <p>We need details about the type of case, the stage of proceedings, estimated value, and any specific requirements or deadlines.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you handle cases nationwide?</h3>
+                    <p>Yes, we provide legal cost drafting services for cases across England and Wales, regardless of the court or jurisdiction.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What are your payment terms?</h3>
+                    <p>We typically require 50% payment upfront with the balance due upon completion. Payment plans are available for larger cases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-icon">ML</div>
+                        <span>Mix Legal Services</span>
+                    </div>
+                    <p>Professional legal cost drafting services across the UK.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#civil">Civil Matters</a></li>
+                        <li><a href="services.html#housing">Housing Disputes</a></li>
+                        <li><a href="services.html#interparty">Interparty Bills</a></li>
+                        <li><a href="services.html#analysis">Cost Analysis</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="help.html">Help & Support</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📧 info@mixlegalservices.co.uk</p>
+                    <p>📞 +44 (0) 20 1234 5678</p>
+                    <p>📍 London, United Kingdom</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mix Legal Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../assets/js/utils/dom-helpers.js"></script>
+    <script src="../assets/js/utils/storage.js"></script>
+    <script src="../assets/js/utils/validation.js"></script>
+    <script src="../assets/js/components/theme-toggle.js"></script>
+    <script src="../assets/js/components/navigation.js"></script>
+    <script src="../assets/js/components/form-handler.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

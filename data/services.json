@@ -1,0 +1,173 @@
+{
+  "services": [
+    {
+      "id": "civil",
+      "icon": "📋",
+      "title": "Civil Matters",
+      "shortDescription": "Expert cost drafting for personal injury claims, contract disputes, commercial litigation, and debt recovery cases.",
+      "fullDescription": "Expert cost drafting for all types of civil litigation including commercial disputes, contract claims, debt recovery, and general civil matters. Our experienced team ensures maximum cost recovery while maintaining compliance with all court rules and procedures.",
+      "features": [
+        "Commercial litigation costs",
+        "Contract dispute bills", 
+        "Debt recovery proceedings",
+        "Landlord and tenant disputes",
+        "Professional negligence claims",
+        "Insolvency proceedings"
+      ],
+      "badges": ["Fast Track", "Multi Track", "High Court"],
+      "pricing": {
+        "from": "£150",
+        "note": "Depending on complexity"
+      },
+      "turnaround": "2-5 days",
+      "category": "litigation"
+    },
+    {
+      "id": "housing",
+      "icon": "🏠",
+      "title": "Housing Disputes",
+      "shortDescription": "Specialized drafting for landlord/tenant disputes, property litigation, housing benefit cases, and possession proceedings.",
+      "fullDescription": "Specialized drafting for housing law matters including possession proceedings, disrepair claims, and housing benefit cases. Our housing law experts understand the unique challenges and opportunities in this area.",
+      "features": [
+        "Possession proceedings (s8 & s21)",
+        "Disrepair and habitability claims",
+        "Housing benefit overpayment",
+        "Anti-social behavior cases",
+        "Right to buy proceedings",
+        "Homelessness appeals"
+      ],
+      "badges": ["County Court", "Upper Tribunal", "Specialist"],
+      "pricing": {
+        "from": "£120",
+        "note": "Standard housing cases"
+      },
+      "turnaround": "1-3 days",
+      "category": "housing"
+    },
+    {
+      "id": "interparty",
+      "icon": "⚖️",
+      "title": "Interparty Bills",
+      "shortDescription": "Detailed assessment preparation when one party must pay the other side's legal costs. Court-ready submissions.",
+      "fullDescription": "Detailed assessment preparation when one party must pay the other side's legal costs. We prepare comprehensive bills ready for court submission with all necessary supporting documentation.",
+      "features": [
+        "Detailed assessment bills",
+        "Points of dispute responses",
+        "Supporting documentation",
+        "Court hearing preparation",
+        "Settlement negotiations",
+        "Appeal documentation"
+      ],
+      "badges": ["Detailed Assessment", "SCCO", "Court Ready"],
+      "pricing": {
+        "from": "£200",
+        "note": "Complex assessment cases"
+      },
+      "turnaround": "3-7 days",
+      "category": "assessment"
+    },
+    {
+      "id": "analysis",
+      "icon": "📊",
+      "title": "Cost Analysis",
+      "shortDescription": "Comprehensive cost analysis and budget preparation for complex litigation matters.",
+      "fullDescription": "Comprehensive cost analysis including budget preparation, cost estimates, and strategic cost planning for complex litigation matters.",
+      "features": [
+        "Cost budgeting",
+        "Precedent H preparation",
+        "Cost estimates",
+        "Strategic cost planning",
+        "Budget variation applications",
+        "Cost management conferences"
+      ],
+      "badges": ["Cost Budgeting", "Precedent H", "Strategic"],
+      "pricing": {
+        "from": "£180",
+        "note": "Budget and analysis work"
+      },
+      "turnaround": "2-4 days",
+      "category": "analysis"
+    },
+    {
+      "id": "review",
+      "icon": "🔍",
+      "title": "Bill Review",
+      "shortDescription": "Thorough review and audit of legal bills to ensure accuracy and compliance with court rules.",
+      "fullDescription": "Thorough review and audit of legal bills to ensure accuracy, compliance with court rules, and maximum recoverability before submission.",
+      "features": [
+        "Bill accuracy checks",
+        "Compliance reviews",
+        "Error identification",
+        "Optimization recommendations",
+        "Court rule compliance",
+        "Recovery maximization"
+      ],
+      "badges": ["Quality Assurance", "Compliance", "Optimization"],
+      "pricing": {
+        "from": "£100",
+        "note": "Review and audit services"
+      },
+      "turnaround": "1-2 days",
+      "category": "review"
+    },
+    {
+      "id": "consultation",
+      "icon": "📝",
+      "title": "Consultation",
+      "shortDescription": "Expert consultation on cost rules, procedure, and strategy for optimal cost recovery.",
+      "fullDescription": "Expert consultation services covering costs law, procedure, strategy, and training for legal professionals seeking to improve their cost recovery processes.",
+      "features": [
+        "Costs law advice",
+        "Procedural guidance",
+        "Strategic planning",
+        "Training sessions",
+        "Best practice reviews",
+        "Process improvement"
+      ],
+      "badges": ["Expert Advice", "Training", "Strategic"],
+      "pricing": {
+        "from": "£150",
+        "note": "Per hour consultation"
+      },
+      "turnaround": "Same day",
+      "category": "consultation"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Standard Package",
+      "description": "Perfect for most civil and housing cases",
+      "price": "£150-£300",
+      "features": [
+        "Bill of costs preparation",
+        "Supporting schedules",
+        "Basic compliance check",
+        "Email support"
+      ]
+    },
+    {
+      "name": "Premium Package", 
+      "description": "For complex commercial litigation",
+      "price": "£300-£600",
+      "features": [
+        "Comprehensive bill preparation",
+        "Detailed analysis",
+        "Full compliance review",
+        "Priority support",
+        "Revision included"
+      ]
+    },
+    {
+      "name": "Enterprise Package",
+      "description": "For high-value cases and ongoing support",
+      "price": "Contact for quote",
+      "features": [
+        "Dedicated costs lawyer",
+        "Unlimited revisions",
+        "24/7 support",
+        "Custom solutions",
+        "Training included"
+      ]
+    }
+  ]
+}

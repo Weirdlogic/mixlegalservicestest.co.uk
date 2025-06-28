@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Mix Legal Services</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header will be loaded here by JavaScript -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-container">
+            <h1>Our Services</h1>
+            <p>Comprehensive legal cost drafting services designed to maximize your cost recovery across all areas of law.</p>
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>Services</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="page-container">
+            <div class="services-intro">
+                <h2>Professional Cost Drafting Excellence</h2>
+                <p>Our expert team provides comprehensive cost drafting services across all areas of civil and criminal law. With over 15 years of combined experience, we understand the intricacies of court rules and procedures to ensure maximum cost recovery for our clients.</p>
+            </div>
+
+            <!-- Services will be loaded dynamically -->
+            <div class="services-grid" id="services-grid">
+                <!-- Content loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Packages -->
+    <section class="packages-section">
+        <div class="page-container">
+            <h2 class="section-title">Service Packages</h2>
+            <div class="packages-grid" id="packages-grid">
+                <!-- Content loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="page-container">
+            <h2 class="section-title">Our Process</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Initial Consultation</h3>
+                        <p>We review your case details and provide a quote within 24 hours.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>File Review</h3>
+                        <p>Our team conducts a thorough review of your case file and time records.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Bill Preparation</h3>
+                        <p>We draft your bill of costs with meticulous attention to detail and compliance.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Quality Review</h3>
+                        <p>Every bill undergoes independent review by a senior costs lawyer.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Delivery</h3>
+                        <p>Final bill delivered with supporting schedules and guidance notes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact our expert team for a consultation and quote today.</p>
+            <a href="contact.html" class="btn-primary btn-large">Get Your Quote Now</a>
+        </div>
+    </section>
+
+    <!-- Footer will be loaded here by JavaScript -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript Files - Load components first -->
+    <script src="../assets/js/utils/dom-helpers.js"></script>
+    <script src="../assets/js/utils/storage.js"></script>
+    <script src="../assets/js/components/header.js"></script>
+    <script src="../assets/js/components/footer.js"></script>
+    <script src="../assets/js/components/theme-toggle.js"></script>
+    <script src="../assets/js/components/navigation.js"></script>
+    <script src="../assets/js/components/smooth-scroll.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        // Load services and packages data
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fallback data if JSON files are not available
+            const servicesData = {
+                services: [
+                    {
+                        id: "civil",
+                        icon: "📋",
+                        title: "Civil Matters",
+                        fullDescription: "Expert cost drafting for all types of civil litigation including commercial disputes, contract claims, debt recovery, and general civil matters. Our experienced team ensures maximum cost recovery while maintaining compliance with all court rules and procedures.",
+                        features: [
+                            "Commercial litigation costs",
+                            "Contract dispute bills", 
+                            "Debt recovery proceedings",
+                            "Landlord and tenant disputes",
+                            "Professional negligence claims",
+                            "Insolvency proceedings"
+                        ],
+                        badges: ["Fast Track", "Multi Track", "High Court"],
+                        pricing: { from: "£150", note: "Depending on complexity" },
+                        turnaround: "2-5 days"
+                    },
+                    {
+                        id: "housing",
+                        icon: "🏠",
+                        title: "Housing Disputes",
+                        fullDescription: "Specialized drafting for housing law matters including possession proceedings, disrepair claims, and housing benefit cases. Our housing law experts understand the unique challenges and opportunities in this area.",
+                        features: [
+                            "Possession proceedings (s8 & s21)",
+                            "Disrepair and habitability claims",
+                            "Housing benefit overpayment",
+                            "Anti-social behavior cases",
+                            "Right to buy proceedings",
+                            "Homelessness appeals"
+                        ],
+                        badges: ["County Court", "Upper Tribunal", "Specialist"],
+                        pricing: { from: "£120", note: "Standard housing cases" },
+                        turnaround: "1-3 days"
+                    },
+                    {
+                        id: "interparty",
+                        icon: "⚖️",
+                        title: "Interparty Bills",
+                        fullDescription: "Detailed assessment preparation when one party must pay the other side's legal costs. We prepare comprehensive bills ready for court submission with all necessary supporting documentation.",
+                        features: [
+                            "Detailed assessment bills",
+                            "Points of dispute responses",
+                            "Supporting documentation",
+                            "Court hearing preparation",
+                            "Settlement negotiations",
+                            "Appeal documentation"
+                        ],
+                        badges: ["Detailed Assessment", "SCCO", "Court Ready"],
+                        pricing: { from: "£200", note: "Complex assessment cases" },
+                        turnaround: "3-7 days"
+                    },
+                    {
+                        id: "analysis",
+                        icon: "📊",
+                        title: "Cost Analysis",
+                        fullDescription: "Comprehensive cost analysis including budget preparation, cost estimates, and strategic cost planning for complex litigation matters.",
+                        features: [
+                            "Cost budgeting",
+                            "Precedent H preparation",
+                            "Cost estimates",
+                            "Strategic cost planning",
+                            "Budget variation applications",
+                            "Cost management conferences"
+                        ],
+                        badges: ["Cost Budgeting", "Precedent H", "Strategic"],
+                        pricing: { from: "£180", note: "Budget and analysis work" },
+                        turnaround: "2-4 days"
+                    },
+                    {
+                        id: "review",
+                        icon: "🔍",
+                        title: "Bill Review",
+                        fullDescription: "Thorough review and audit of legal bills to ensure accuracy, compliance with court rules, and maximum recoverability before submission.",
+                        features: [
+                            "Bill accuracy checks",
+                            "Compliance reviews",
+                            "Error identification",
+                            "Optimization recommendations",
+                            "Court rule compliance",
+                            "Recovery maximization"
+                        ],
+                        badges: ["Quality Assurance", "Compliance", "Optimization"],
+                        pricing: { from: "£100", note: "Review and audit services" },
+                        turnaround: "1-2 days"
+                    },
+                    {
+                        id: "consultation",
+                        icon: "📝",
+                        title: "Consultation",
+                        fullDescription: "Expert consultation services covering costs law, procedure, strategy, and training for legal professionals seeking to improve their cost recovery processes.",
+                        features: [
+                            "Costs law advice",
+                            "Procedural guidance",
+                            "Strategic planning",
+                            "Training sessions",
+                            "Best practice reviews",
+                            "Process improvement"
+                        ],
+                        badges: ["Expert Advice", "Training", "Strategic"],
+                        pricing: { from: "£150", note: "Per hour consultation" },
+                        turnaround: "Same day"
+                    }
+                ],
+                packages: [
+                    {
+                        name: "Standard Package",
+                        description: "Perfect for most civil and housing cases",
+                        price: "£150-£300",
+                        features: [
+                            "Bill of costs preparation",
+                            "Supporting schedules",
+                            "Basic compliance check",
+                            "Email support"
+                        ]
+                    },
+                    {
+                        name: "Premium Package", 
+                        description: "For complex commercial litigation",
+                        price: "£300-£600",
+                        features: [
+                            "Comprehensive bill preparation",
+                            "Detailed analysis",
+                            "Full compliance review",
+                            "Priority support",
+                            "Revision included"
+                        ]
+                    },
+                    {
+                        name: "Enterprise Package",
+                        description: "For high-value cases and ongoing support",
+                        price: "Contact for quote",
+                        features: [
+                            "Dedicated costs lawyer",
+                            "Unlimited revisions",
+                            "24/7 support",
+                            "Custom solutions",
+                            "Training included"
+                        ]
+                    }
+                ]
+            };
+
+            loadServices(servicesData);
+            loadPackages(servicesData);
+        });
+
+        function loadServices(data) {
+            const servicesGrid = document.getElementById('services-grid');
+            if (!servicesGrid || !data.services) return;
+
+            servicesGrid.innerHTML = data.services.map(service => `
+                <div class="service-card detailed" id="${service.id}">
+                    <div class="service-icon">${service.icon}</div>
+                    <h3>${service.title}</h3>
+                    <p>${service.fullDescription}</p>
+                    
+                    <div class="service-details">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                        
+                        <div class="service-features">
+                            ${service.badges.map(badge => `<span class="badge">${badge}</span>`).join('')}
+                        </div>
+                        
+                        <div class="service-pricing">
+                            <strong>From ${service.pricing.from} + VAT</strong>
+                            <small>${service.pricing.note}</small>
+                        </div>
+                        
+                        <div class="service-turnaround">
+                            <strong>Turnaround:</strong> ${service.turnaround}
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html?service=${service.id}" class="btn-primary">Get Quote</a>
+                </div>
+            `).join('');
+        }
+
+        function loadPackages(data) {
+            const packagesGrid = document.getElementById('packages-grid');
+            if (!packagesGrid || !data.packages) return;
+
+            packagesGrid.innerHTML = data.packages.map(pkg => `
+                <div class="package-card">
+                    <h3>${pkg.name}</h3>
+                    <p>${pkg.description}</p>
+                    <div class="package-price">${pkg.price}</div>
+                    <ul>
+                        ${pkg.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                    <a href="contact.html?package=${pkg.name.toLowerCase().replace(' ', '-')}" class="btn-secondary">Choose Package</a>
+                </div>
+            `).join('');
+        }
+    </script>
+
+    <style>
+        .service-card.detailed {
+            padding: var(--space-8);
+            margin-bottom: var(--space-6);
+        }
+
+        .service-details {
+            margin: var(--space-6) 0;
+        }
+
+        .service-details h4 {
+            color: var(--text-dark);
+            margin-bottom: var(--space-3);
+            font-size: var(--text-lg);
+        }
+
+        .service-details ul {
+            margin-bottom: var(--space-4);
+        }
+
+        .service-features {
+            display: flex;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .service-pricing {
+            background: var(--bg-gray);
+            padding: var(--space-3);
+            border-radius: var(--rounded-md);
+            margin-bottom: var(--space-3);
+        }
+
+        .service-pricing strong {
+            color: var(--primary-blue);
+            display: block;
+        }
+
+        .service-turnaround {
+            font-size: var(--text-sm);
+            color: var(--text-gray);
+            margin-bottom: var(--space-4);
+        }
+
+        .packages-section {
+            background: var(--bg-gray);
+            padding: var(--space-16) 0;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .package-card {
+            background: var(--bg-white);
+            padding: var(--space-8);
+            border-radius: var(--rounded-xl);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .package-price {
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            color: var(--primary-blue);
+            margin: var(--space-4) 0;
+        }
+
+        .package-card ul {
+            text-align: left;
+            margin-bottom: var(--space-6);
+        }
+
+        .process-section {
+            background: var(--bg-white);
+            padding: var(--space-16) 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: var(--text-white);
+            border-radius: var(--rounded-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            margin: 0 auto var(--space-4);
+        }
+
+        .step-content h3 {
+            margin-bottom: var(--space-3);
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+
+            .service-features {
+                justify-content: center;
+            }
+        }
+    </style>
+</body>
+</html>
+
+    <style>
+        .service-card.detailed {
+            padding: var(--space-8);
+            margin-bottom: var(--space-6);
+        }
+
+        .service-details {
+            margin: var(--space-6) 0;
+        }
+
+        .service-details h4 {
+            color: var(--text-dark);
+            margin-bottom: var(--space-3);
+            font-size: var(--text-lg);
+        }
+
+        .service-details ul {
+            margin-bottom: var(--space-4);
+        }
+
+        .service-features {
+            display: flex;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .service-pricing {
+            background: var(--bg-gray);
+            padding: var(--space-3);
+            border-radius: var(--rounded-md);
+            margin-bottom: var(--space-3);
+        }
+
+        .service-pricing strong {
+            color: var(--primary-blue);
+            display: block;
+        }
+
+        .service-turnaround {
+            font-size: var(--text-sm);
+            color: var(--text-gray);
+            margin-bottom: var(--space-4);
+        }
+
+        .packages-section {
+            background: var(--bg-gray);
+            padding: var(--space-16) 0;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .package-card {
+            background: var(--bg-white);
+            padding: var(--space-8);
+            border-radius: var(--rounded-xl);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all var(--transition-normal);
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .package-price {
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            color: var(--primary-blue);
+            margin: var(--space-4) 0;
+        }
+
+        .package-card ul {
+            text-align: left;
+            margin-bottom: var(--space-6);
+        }
+
+        .process-section {
+            background: var(--bg-white);
+            padding: var(--space-16) 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-blue);
+            color: var(--text-white);
+            border-radius: var(--rounded-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            margin: 0 auto var(--space-4);
+        }
+
+        .step-content h3 {
+            margin-bottom: var(--space-3);
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+
+            .service-features {
+                justify-content: center;
+            }
+        }
+    </style>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Mix Legal Services</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">ML</div>
+                <span>Mix Legal Services</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙 Dark</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-container">
+            <h1>Our Services</h1>
+            <p>Comprehensive legal cost drafting services designed to maximize your cost recovery across all areas of law.</p>
+            
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <span class="breadcrumb-separator">›</span>
+                <span>Services</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="page-container">
+            <div class="services-intro">
+                <h2>Professional Cost Drafting Excellence</h2>
+                <p>Our expert team provides comprehensive cost drafting services across all areas of civil and criminal law. With over 15 years of combined experience, we understand the intricacies of court rules and procedures to ensure maximum cost recovery for our clients.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card detailed" id="civil">
+                    <div class="service-icon">📋</div>
+                    <h3>Civil Matters</h3>
+                    <p>Expert cost drafting for all types of civil litigation including commercial disputes, contract claims, debt recovery, and general civil matters.</p>
+                    
+                    <div class="service-details">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>Commercial litigation costs</li>
+                            <li>Contract dispute bills</li>
+                            <li>Debt recovery proceedings</li>
+                            <li>Landlord and tenant disputes</li>
+                            <li>Professional negligence claims</li>
+                            <li>Insolvency proceedings</li>
+                        </ul>
+                        
+                        <div class="service-features">
+                            <span class="badge">Fast Track</span>
+                            <span class="badge">Multi Track</span>
+                            <span class="badge">High Court</span>
+                        </div>
+                        
+                        <div class="service-pricing">
+                            <strong>From £150 + VAT</strong>
+                            <small>Depending on complexity</small>
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html?service=civil" class="btn-primary">Get Quote</a>
+                </div>
+
+                <div class="service-card detailed" id="housing">
+                    <div class="service-icon">🏠</div>
+                    <h3>Housing Disputes</h3>
+                    <p>Specialized drafting for housing law matters including possession proceedings, disrepair claims, and housing benefit cases.</p>
+                    
+                    <div class="service-details">
+                        <h4>What's Included:</h4>
+                        <ul>
+                            <li>Possession proceedings (s8 & s21)</li>
+                            <li>Disrepair and habitability claims</li>
+                            <li>Housing benefit overpayment</li>
+                            <li>Anti-social behavior cases</li>
+                            <li>Right to buy proceedings</li>
+                            <li>Homelessness appeals</li>
+                        </ul>
+                        
+                        <div class="service-features">
+                            <span class="badge">County Court</span>
+                            <span class="badge">Upper Tribunal</span>
+                            <span class="badge">Specialist</span>
+                        </div>
+                        
+                        <div class="service-pricing">
+                            <strong>From £120 + VAT</strong>
+                            <small>Standard housing cases</small>
+                        </div>
+                    </div>
+                    
+                    <a href

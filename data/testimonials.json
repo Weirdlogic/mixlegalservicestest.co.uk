@@ -1,0 +1,113 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Mix Legal Services helped us recover 30% more in costs than our previous provider. Their attention to detail is exceptional and they always deliver on time.",
+      "author": {
+        "name": "James Smith",
+        "title": "Partner, Smith & Associates",
+        "initials": "JS"
+      },
+      "rating": 5,
+      "caseType": "Commercial Litigation",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "quote": "Professional, reliable, and always delivered on time. They understand the complexities of housing law costs better than anyone else we've worked with.",
+      "author": {
+        "name": "Maria Johnson", 
+        "title": "Housing Solicitor",
+        "initials": "MJ"
+      },
+      "rating": 5,
+      "caseType": "Housing Law",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "quote": "Their expertise in interparty bills saved us significant time and increased our recovery rate substantially. Highly recommended for complex assessment work.",
+      "author": {
+        "name": "David Wilson",
+        "title": "Senior Partner, Wilson & Co",
+        "initials": "DW"
+      },
+      "rating": 5,
+      "caseType": "Detailed Assessment",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "quote": "Outstanding service and deep knowledge of cost drafting. They've become an essential part of our litigation team for high-value commercial matters.",
+      "author": {
+        "name": "Sarah Thompson",
+        "title": "Commercial Litigation Lead",
+        "initials": "ST"
+      },
+      "rating": 5,
+      "caseType": "Commercial",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "quote": "The quality of their work is consistently excellent. They've helped us achieve better cost recovery rates across all our personal injury cases.",
+      "author": {
+        "name": "Michael Brown",
+        "title": "PI Department Head",
+        "initials": "MB"
+      },
+      "rating": 5,
+      "caseType": "Personal Injury",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "quote": "Fast, accurate, and cost-effective. Their housing law expertise has been invaluable for our possession and disrepair cases.",
+      "author": {
+        "name": "Emma Davis",
+        "title": "Housing Law Specialist",
+        "initials": "ED"
+      },
+      "rating": 5,
+      "caseType": "Housing",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "quote": "Mix Legal Services transformed our cost recovery process. Their systematic approach and attention to detail is exactly what we needed.",
+      "author": {
+        "name": "Robert Taylor",
+        "title": "Managing Partner",
+        "initials": "RT"
+      },
+      "rating": 5,
+      "caseType": "General Practice",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "quote": "Exceptional knowledge of costs budgeting. They've helped us navigate complex cost management requirements with confidence.",
+      "author": {
+        "name": "Lisa Anderson",
+        "title": "Senior Associate",
+        "initials": "LA"
+      },
+      "rating": 5,
+      "caseType": "Cost Budgeting",
+      "featured": false
+    }
+  ],
+  "stats": {
+    "totalTestimonials": 8,
+    "averageRating": 5.0,
+    "featuredCount": 2,
+    "caseTypes": [
+      "Commercial Litigation",
+      "Housing Law", 
+      "Detailed Assessment",
+      "Personal Injury",
+      "Cost Budgeting",
+      "General Practice"
+    ]
+  }
+}

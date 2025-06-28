@@ -1,0 +1,113 @@
+{
+  "site": {
+    "name": "Mix Legal Services",
+    "tagline": "Professional Legal Cost Drafting",
+    "description": "Expert legal cost drafting services for solicitors, barristers, and legal departments across the UK. Maximize your cost recovery with our professional drafting team.",
+    "url": "https://mixlegalservices.co.uk",
+    "logo": {
+      "text": "ML",
+      "alt": "Mix Legal Services Logo"
+    }
+  },
+  "contact": {
+    "email": "info@mixlegalservices.co.uk",
+    "phone": "+44 (0) 20 1234 5678",
+    "address": {
+      "line1": "123 Legal District",
+      "line2": "London, EC1A 1BB",
+      "country": "United Kingdom"
+    },
+    "hours": {
+      "monday": "9:00 AM - 6:00 PM",
+      "tuesday": "9:00 AM - 6:00 PM", 
+      "wednesday": "9:00 AM - 6:00 PM",
+      "thursday": "9:00 AM - 6:00 PM",
+      "friday": "9:00 AM - 6:00 PM",
+      "saturday": "10:00 AM - 2:00 PM",
+      "sunday": "Closed"
+    }
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/mix-legal-services",
+    "twitter": "https://twitter.com/mixlegalservices"
+  },
+  "navigation": {
+    "main": [
+      {
+        "label": "Home",
+        "url": "/index.html",
+        "id": "home"
+      },
+      {
+        "label": "About", 
+        "url": "/pages/about.html",
+        "id": "about"
+      },
+      {
+        "label": "Services",
+        "url": "/pages/services.html", 
+        "id": "services"
+      },
+      {
+        "label": "Contact",
+        "url": "/pages/contact.html",
+        "id": "contact"
+      },
+      {
+        "label": "Help",
+        "url": "/pages/help.html",
+        "id": "help"
+      }
+    ],
+    "footer": [
+      {
+        "section": "Services",
+        "links": [
+          {"label": "Civil Matters", "url": "/pages/services.html#civil"},
+          {"label": "Housing Disputes", "url": "/pages/services.html#housing"},
+          {"label": "Interparty Bills", "url": "/pages/services.html#interparty"},
+          {"label": "Cost Analysis", "url": "/pages/services.html#analysis"}
+        ]
+      },
+      {
+        "section": "Company", 
+        "links": [
+          {"label": "About Us", "url": "/pages/about.html"},
+          {"label": "Contact", "url": "/pages/contact.html"},
+          {"label": "Help & Support", "url": "/pages/help.html"},
+          {"label": "Privacy Policy", "url": "/pages/privacy.html"}
+        ]
+      }
+    ]
+  },
+  "features": {
+    "darkMode": true,
+    "mobileMenu": true,
+    "smoothScroll": true,
+    "formValidation": true,
+    "localStorage": true
+  },
+  "analytics": {
+    "gtag": "GA_MEASUREMENT_ID",
+    "enabled": false
+  },
+  "seo": {
+    "keywords": [
+      "legal cost drafting",
+      "costs lawyer",
+      "bill of costs",
+      "detailed assessment",
+      "legal costs recovery",
+      "civil litigation costs",
+      "housing law costs",
+      "interparty bills"
+    ],
+    "author": "Mix Legal Services",
+    "robots": "index, follow"
+  },
+  "performance": {
+    "lazyLoading": true,
+    "imageOptimization": true,
+    "caching": true
+  }
+}
