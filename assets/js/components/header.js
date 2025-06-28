@@ -21,15 +21,13 @@ class Header {
     }
 
     getNavigation() {
-        const isSubPage = this.currentPage !== 'home';
-        const basePath = isSubPage ? '../' : '';
-        
+        // All pages are now in the root directory
         return [
-            { label: 'Home', url: `${basePath}index.html`, id: 'home' },
-            { label: 'About', url: `${basePath}pages/about.html`, id: 'about' },
-            { label: 'Services', url: `${basePath}pages/services.html`, id: 'services' },
-            { label: 'Contact', url: `${basePath}pages/contact.html`, id: 'contact' },
-            { label: 'Help', url: `${basePath}pages/help.html`, id: 'help' }
+            { label: 'Home', url: 'index.html', id: 'home' },
+            { label: 'About', url: 'about.html', id: 'about' },
+            { label: 'Services', url: 'services.html', id: 'services' },
+            { label: 'Contact', url: 'contact.html', id: 'contact' },
+            { label: 'Help', url: 'help.html', id: 'help' }
         ];
     }
 
@@ -69,6 +67,9 @@ class Header {
         } else {
             document.body.insertAdjacentHTML('afterbegin', headerHTML);
         }
+        
+        // Dispatch event to signal header is rendered
+        document.dispatchEvent(new CustomEvent('headerRendered'));
     }
 
     updateActiveNavigation() {
@@ -84,8 +85,3 @@ class Header {
         }, 100);
     }
 }
-
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    new Header();
-});

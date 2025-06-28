@@ -1,26 +1,35 @@
 // Theme Toggle Component
 class ThemeToggle {
     constructor() {
-        this.button = document.getElementById('theme-toggle');
         this.currentTheme = this.getCurrentTheme();
-        
-        if (this.button) {
-            this.init();
-        }
+        this.init();
     }
 
     init() {
-        // Set initial button text
-        this.updateButtonText();
+        // Wait for header to be rendered
+        const tryInit = () => {
+            this.button = document.getElementById('theme-toggle');
+            
+            if (!this.button) {
+                // Header not ready yet, try again in 100ms
+                setTimeout(tryInit, 100);
+                return;
+            }
+            
+            // Set initial button text
+            this.updateButtonText();
+            
+            // Add event listener
+            this.button.addEventListener('click', (e) => this.handleToggle(e));
+            
+            // Listen for system theme changes
+            this.mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            this.mediaQuery.addEventListener('change', (e) => this.handleSystemThemeChange(e));
+            
+            console.log('Theme toggle initialized');
+        };
         
-        // Add event listener
-        this.button.addEventListener('click', (e) => this.handleToggle(e));
-        
-        // Listen for system theme changes
-        this.mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        this.mediaQuery.addEventListener('change', (e) => this.handleSystemThemeChange(e));
-        
-        console.log('Theme toggle initialized');
+        tryInit();
     }
 
     getCurrentTheme() {

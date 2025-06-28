@@ -214,3 +214,39 @@ select {
         --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
     }
 }
+
+/* Light theme specific overrides */
+:root .hero-visual,
+[data-theme="light"] .hero-visual {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+:root .hero-visual h3,
+[data-theme="light"] .hero-visual h3 {
+    color: var(--text-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+:root .hero-visual p,
+[data-theme="light"] .hero-visual p {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Light theme form placeholders for better contrast */
+:root input::placeholder,
+:root textarea::placeholder,
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+    color: var(--text-light);
+    opacity: 1; /* Ensure consistent opacity across browsers */
+}
+
+/* Light theme selection */
+:root ::selection,
+[data-theme="light"] ::selection {
+    background-color: var(--primary-blue);
+    color: var(--text-white);
+}

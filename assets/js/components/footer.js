@@ -20,21 +20,19 @@ class Footer {
     }
 
     getFooterLinks() {
-        const isSubPage = this.currentPage !== 'home';
-        const basePath = isSubPage ? '../' : '';
-        
+        // All pages are now in the root directory
         return {
             services: [
-                { label: 'Civil Matters', url: `${basePath}pages/services.html#civil` },
-                { label: 'Housing Disputes', url: `${basePath}pages/services.html#housing` },
-                { label: 'Interparty Bills', url: `${basePath}pages/services.html#interparty` },
-                { label: 'Cost Analysis', url: `${basePath}pages/services.html#analysis` }
+                { label: 'Civil Matters', url: 'services.html#civil' },
+                { label: 'Housing Disputes', url: 'services.html#housing' },
+                { label: 'Interparty Bills', url: 'services.html#interparty' },
+                { label: 'Cost Analysis', url: 'services.html#analysis' }
             ],
             company: [
-                { label: 'About Us', url: `${basePath}pages/about.html` },
-                { label: 'Contact', url: `${basePath}pages/contact.html` },
-                { label: 'Help & Support', url: `${basePath}pages/help.html` },
-                { label: 'Privacy Policy', url: `${basePath}pages/privacy.html` }
+                { label: 'About Us', url: 'about.html' },
+                { label: 'Contact', url: 'contact.html' },
+                { label: 'Help & Support', url: 'help.html' },
+                { label: 'Privacy Policy', url: 'privacy.html' }
             ]
         };
     }
@@ -96,8 +94,3 @@ class Footer {
         }
     }
 }
-
-// Auto-initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    new Footer();
-});

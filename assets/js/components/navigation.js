@@ -11,24 +11,37 @@ class Navigation {
     }
 
     init() {
-        if (!this.navMenu) return;
+        // Use a timeout to wait for header to be rendered
+        const tryInit = () => {
+            this.navMenu = document.getElementById('nav-menu');
+            this.mobileToggle = document.getElementById('mobile-menu-toggle');
+            this.navLinks = document.querySelectorAll('.nav-menu a');
+            
+            if (!this.navMenu) {
+                // Header not ready yet, try again in 100ms
+                setTimeout(tryInit, 100);
+                return;
+            }
+            
+            // Set up mobile menu toggle
+            this.setupMobileToggle();
+            
+            // Set up navigation links
+            this.setupNavLinks();
+            
+            // Set active link based on current page
+            this.setActiveLink();
+            
+            // Handle escape key for mobile menu
+            this.setupKeyboardNavigation();
+            
+            // Handle clicks outside menu
+            this.setupOutsideClickHandler();
+            
+            console.log('Navigation initialized');
+        };
         
-        // Set up mobile menu toggle
-        this.setupMobileToggle();
-        
-        // Set up navigation links
-        this.setupNavLinks();
-        
-        // Set active link based on current page
-        this.setActiveLink();
-        
-        // Handle escape key for mobile menu
-        this.setupKeyboardNavigation();
-        
-        // Handle clicks outside menu
-        this.setupOutsideClickHandler();
-        
-        console.log('Navigation initialized');
+        tryInit();
     }
 
     setupMobileToggle() {

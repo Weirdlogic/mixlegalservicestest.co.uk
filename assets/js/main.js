@@ -46,25 +46,38 @@ class LegalServicesApp {
     }
 
     initializeComponents() {
-        // Initialize navigation
-        if (typeof Navigation !== 'undefined') {
-            this.navigation = new Navigation();
+        // Initialize header first (this creates the DOM elements)
+        if (typeof Header !== 'undefined') {
+            this.header = new Header();
         }
+        
+        // Initialize footer
+        if (typeof Footer !== 'undefined') {
+            this.footer = new Footer();
+        }
+        
+        // Wait a bit for header/footer to render, then initialize dependent components
+        setTimeout(() => {
+            // Initialize navigation (depends on header being rendered)
+            if (typeof Navigation !== 'undefined') {
+                this.navigation = new Navigation();
+            }
 
-        // Initialize theme toggle
-        if (typeof ThemeToggle !== 'undefined') {
-            this.themeToggle = new ThemeToggle();
-        }
+            // Initialize theme toggle (depends on header being rendered)
+            if (typeof ThemeToggle !== 'undefined') {
+                this.themeToggle = new ThemeToggle();
+            }
 
-        // Initialize smooth scroll
-        if (typeof SmoothScroll !== 'undefined') {
-            this.smoothScroll = new SmoothScroll();
-        }
+            // Initialize smooth scroll
+            if (typeof SmoothScroll !== 'undefined') {
+                this.smoothScroll = new SmoothScroll();
+            }
 
-        // Initialize form handler (only on contact page)
-        if (this.currentPage === 'contact' && typeof FormHandler !== 'undefined') {
-            this.formHandler = new FormHandler();
-        }
+            // Initialize form handler (only on contact page)
+            if (this.currentPage === 'contact' && typeof FormHandler !== 'undefined') {
+                this.formHandler = new FormHandler();
+            }
+        }, 50);
     }
 
     setupEventListeners() {
@@ -388,6 +401,58 @@ class LegalServicesApp {
         
         if (this.formHandler) {
             this.formHandler.cleanup();
+        }
+    }
+
+    async loadAllServices() {
+        try {
+            const servicesContainer = document.getElementById('services-container');
+            if (!servicesContainer) return;
+
+            const services = await this.fetchServicesData();
+            
+            servicesContainer.innerHTML = services.map(service => `
+                <div class="service-card" id="${service.id}">
+                    <div class="service-icon">${service.icon}</div>
+                    <h3>${service.title}</h3>
+                    <p>${service.description}</p>
+                    <ul class="service-features">
+                        ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                    <div class="service-pricing">
+                        <span class="price">${service.price}</span>
+                    </div>
+                    <a href="contact.html?service=${service.id}" class="btn-primary">Get Quote</a>
+                </div>
+            `).join('');
+
+        } catch (error) {
+            console.error('Error loading all services:', error);
+        }
+    }
+
+    async loadAllTestimonials() {
+        try {
+            const testimonialsGrid = document.getElementById('testimonials-grid');
+            if (!testimonialsGrid) return;
+
+            const testimonials = await this.fetchTestimonialsData();
+            
+            testimonialsGrid.innerHTML = testimonials.map(testimonial => `
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">${testimonial.quote}</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">${testimonial.author.initials}</div>
+                        <div class="author-info">
+                            <h4>${testimonial.author.name}</h4>
+                            <p>${testimonial.author.title}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+        } catch (error) {
+            console.error('Error loading all testimonials:', error);
         }
     }
 }

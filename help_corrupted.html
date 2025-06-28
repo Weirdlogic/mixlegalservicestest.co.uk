@@ -6,11 +6,11 @@
     <title>Help & Support - Mix Legal Services</title>
     
     <!-- CSS Files -->
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/layout.css">
-    <link rel="stylesheet" href="../assets/css/components.css">
-    <link rel="stylesheet" href="../assets/css/theme.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
     <!-- Header will be loaded here by JavaScript -->
@@ -24,7 +24,7 @@
             
             <!-- Breadcrumb -->
             <nav class="breadcrumb">
-                <a href="../index.html">Home</a>
+                <a href="index.html">Home</a>
                 <span class="breadcrumb-separator">›</span>
                 <span>Help</span>
             </nav>
@@ -305,14 +305,14 @@
     <div id="footer-placeholder"></div>
 
     <!-- JavaScript Files - Load components first -->
-    <script src="../assets/js/utils/dom-helpers.js"></script>
-    <script src="../assets/js/utils/storage.js"></script>
-    <script src="../assets/js/components/header.js"></script>
-    <script src="../assets/js/components/footer.js"></script>
-    <script src="../assets/js/components/theme-toggle.js"></script>
-    <script src="../assets/js/components/navigation.js"></script>
-    <script src="../assets/js/components/smooth-scroll.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/utils/dom-helpers.js"></script>
+    <script src="assets/js/utils/storage.js"></script>
+    <script src="assets/js/components/header.js"></script>
+    <script src="assets/js/components/footer.js"></script>
+    <script src="assets/js/components/theme-toggle.js"></script>
+    <script src="assets/js/components/navigation.js"></script>
+    <script src="assets/js/components/smooth-scroll.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
         // Setup help navigation
@@ -520,14 +520,14 @@
     <div id="footer-placeholder"></div>
 
     <!-- JavaScript Files - Load components first -->
-    <script src="../assets/js/utils/dom-helpers.js"></script>
-    <script src="../assets/js/utils/storage.js"></script>
-    <script src="../assets/js/components/header.js"></script>
-    <script src="../assets/js/components/footer.js"></script>
-    <script src="../assets/js/components/theme-toggle.js"></script>
-    <script src="../assets/js/components/navigation.js"></script>
-    <script src="../assets/js/components/smooth-scroll.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/utils/dom-helpers.js"></script>
+    <script src="assets/js/utils/storage.js"></script>
+    <script src="assets/js/components/header.js"></script>
+    <script src="assets/js/components/footer.js"></script>
+    <script src="assets/js/components/theme-toggle.js"></script>
+    <script src="assets/js/components/navigation.js"></script>
+    <script src="assets/js/components/smooth-scroll.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
         // Setup help navigation
@@ -736,19 +736,19 @@
 <div id="footer-placeholder"></div>
 
 <!-- JavaScript Files -->
-<script src="../assets/js/utils/dom-helpers.js"></script>
-<script src="../assets/js/utils/storage.js"></script>
-<script src="../assets/js/components/theme-toggle.js"></script>
-<script src="../assets/js/components/navigation.js"></script>
-<script src="../assets/js/components/smooth-scroll.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="assets/js/utils/dom-helpers.js"></script>
+<script src="assets/js/utils/storage.js"></script>
+<script src="assets/js/components/theme-toggle.js"></script>
+<script src="assets/js/components/navigation.js"></script>
+<script src="assets/js/components/smooth-scroll.js"></script>
+<script src="assets/js/main.js"></script>
 
 <script>
     // Load header and footer components
     document.addEventListener('DOMContentLoaded', async function() {
         // Load header
         try {
-            const headerResponse = await fetch('../components/header.html');
+            const headerResponse = await fetch('components/header.html');
             const headerHtml = await headerResponse.text();
             document.getElementById('header-placeholder').innerHTML = headerHtml;
         } catch (error) {
@@ -757,7 +757,7 @@
 
         // Load footer
         try {
-            const footerResponse = await fetch('../components/footer.html');
+            const footerResponse = await fetch('components/footer.html');
             const footerHtml = await footerResponse.text();
             document.getElementById('footer-placeholder').innerHTML = footerHtml;
         } catch (error) {
